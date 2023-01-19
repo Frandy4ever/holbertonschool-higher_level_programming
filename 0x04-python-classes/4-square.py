@@ -3,11 +3,20 @@
 
 
 class Square:
+    '''Represent a square.'''
+
     def __init__(self, size=0):
         self.size = size
+        '''Initialize a new square.
+
+        Args:
+            size (int): The size of the new square.
+        '''
 
     @property
     def size(self):
+        '''Get/set the current size of the square.'''
+
         return self._size
 
     @size.setter
