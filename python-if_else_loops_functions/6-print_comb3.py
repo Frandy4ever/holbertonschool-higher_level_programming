@@ -7,3 +7,4 @@ for digit1 in range(10):
         if digit1 != digit2 and digit1 < digit2:
             # Print the smallest combination of two different digits.
             print("{:02}, ".format(digit1 * 10 + digit2), end="")
+print('')
