@@ -12,6 +12,3 @@ def fizzbuzz():
 
     # Print the FizzBuzz values separated by spaces.
     print(" ".join(fizzbuzz_values))
-
-# Call the fizzbuzz function to generate and print the FizzBuzz sequence.
-fizzbuzz()
