@@ -14,3 +14,4 @@ def fizzbuzz():
         else:
             # For all other numbers, print the number itself without a space.
             print(number, end=" ")
+
