@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for char_code in range(ord('z'), ord('A') - 1, -1):
-    char = chr(char_code)
-    # Check if the character is lowercase or uppercase and print accordingly.
-    print(char.lower() if char.isupper() else char.upper(), end="")
+i = 0
+for c in range(ord('z'), ord('a') - 1, -1):
+    print("{}".format(chr(c - i)), end="")
+    i = 32 if i == 0 else 0
