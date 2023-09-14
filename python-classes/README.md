@@ -1,1 +1,1 @@
-readme file ../python-exceptions/README.md
+readme file
