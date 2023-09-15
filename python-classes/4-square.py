@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-# Define a class called Square
+"""Define a class called Square"""
 class Square:
-    
-    # Constructor method for initializing a Square object
+  
+    """Constructor method for initializing a Square object"""
     def __init__(self, size=0):
         # Set the 'size' attribute to the provided 'size' parameter (default to 0)
         self.size = size
