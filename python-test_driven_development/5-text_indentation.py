@@ -1,35 +1,30 @@
 #!/usr/bin/python3
-The ``text_indentation`` module
-======================
+# 5-text_indentation.py
+"""Defines a text-indentation function."""
 
-using ``text_indentation()``
 
-----------------------
+def text_indentation(text):
+    """Print text with two new lines after each '.', '?', and ':'.
 
-Testing import import text_indentation:
-    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    Args:
+        text (string): The text to print.
+    Raises:
+        TypeError: If text is not a string.
+    """
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
 
-test normal:
-    >>> text_indentation("test? azer")
-    test?
-    <BLANKLINE>
-    azer
+    c = 0
+    while c < len(text) and text[c] == ' ':
+        c += 1
 
-test text not str
-    >>> text_indentation(5)
-    Traceback (most recent call last):
-    ...
-    TypeError: text must be a string
-
-test output
-    >>> text_indentation("Lorem? ipsum dolor sit amet, consectetur adipiscing elit.")
-    Lorem?
-    <BLANKLINE>
-    ipsum dolor sit amet, consectetur adipiscing elit.
-    <BLANKLINE>
-
-Testing missing args
-    >>> text_indentation()
-    Traceback (most recent call last):
-    ...
-    TypeError: text_indentation() missing 1 required positional argument: 'text'
+    while c < len(text):
+        print(text[c], end="")
+        if text[c] == "\n" or text[c] in ".?:":
+            if text[c] in ".?:":
+                print("\n")
+            c += 1
+            while c < len(text) and text[c] == ' ':
+                c += 1
+            continue
+        c += 1
