@@ -1,15 +1,37 @@
 #!/usr/bin/python3
 """Add all arguments to a Python list and save them to a file."""
 import sys
+import json
+import os
+from 5-save_to_json_file import save_to_json_file
+from 6-load_from_json_file import load_from_json_file
 
-if __name__ == "__main__":
-    save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
-    load_from_json_file = \
-        __import__('8-load_from_json_file').load_from_json_file
 
-    try:
-        items = load_from_json_file("add_item.json")
-    except FileNotFoundError:
-        items = []
-    items.extend(sys.argv[1:])
-    save_to_json_file(items, "add_item.json")
+def save_to_json_file(my_obj, filename):
+    with open(filename, 'w') as file:
+        json.dump(my_obj, file)
+
+
+def load_from_json_file(filename):
+    with open(filename, 'r') as file:
+        return json.load(file)
+
+
+"""Define the file name for saving the list"""
+filename = "add_item.json"
+
+"""Check if the file exists and load its contents if it does"""
+if os.path.exists(filename):
+    my_list = load_from_json_file(filename)
+else:
+    my_list = []
+
+"""Add all command line arguments to the list"""
+for arg in sys.argv[1:]:
+    my_list.append(arg)
+
+"""Save the updated list as a JSON representation"""
+save_to_json_file(my_list, filename)
+
+"""Print the updated list"""
+print("List after adding arguments:", my_list)
