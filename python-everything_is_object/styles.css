@@ -1,0 +1,30 @@
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  font-size: ;
+}
+
+div.container {
+  width: 50%;
+  height: 100vh;
+  margin: 0 auto 30px;
+  padding: 30px;
+}
+
+.code {
+  font-family: 'Source Code Pro', monospace;
+  width: auto;
+  height: 130px;
+  background: black;
+  color: white;
+}
+
+.big {
+  height: 320px;
+}
+
+.mid {
+  height: 200px;
+}
