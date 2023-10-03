@@ -1,22 +1,7 @@
 #!/usr/bin/python3
-    """
-    The class Rectagle that inherits from Base
-    """
-
-    
-    Raises:
-        TypeError: _description_
-        ValueError: _description_
-        TypeError: _description_
-        ValueError: _description_
-        TypeError: _description_
-        ValueError: _description_
-        TypeError: _description_
-        ValueError: _description_
-
-    Returns:
-        _type_: _description_
-    """
+"""
+The class Rectangle that inherits from Base
+"""
 from .base import Base
 
 
