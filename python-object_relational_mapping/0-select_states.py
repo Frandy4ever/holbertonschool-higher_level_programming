@@ -1,16 +1,40 @@
 #!/usr/bin/python3
-"""This module contains a script that lists all states from hbtn_0e_0_usa"""
 
 import sys
 import MySQLdb
 
-if __name__ == "__main__":
-    conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                           passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
-    cur = conn.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
-    query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
-    cur.close()
-    conn.close()
+
+def list_states_with_names_starting_with_n(mysql_username, mysql_password, database_name):
+  """Lists all states with a name starting with N (upper N) from the database.
+
+  Args:
+    mysql_username: The MySQL username.
+    mysql_password: The MySQL password.
+    database_name: The MySQL database name.
+
+  Returns:
+    A list of all states with a name starting with N (upper N).
+  """
+
+  # Connect to the MySQL server.
+  db = MySQLdb.connect(host='localhost', port=3306, user=mysql_username, passwd=mysql_password, db=database_name)
+
+  # Create a cursor object.
+  cursor = db.cursor()
+
+  # Execute the SQL query to list all states with a name starting with N.
+  cursor.execute('SELECT name FROM states WHERE name LIKE \'N%\' ORDER BY id ASC')
+
+  # Fetch all the rows from the cursor.
+  states = cursor.fetchall()
+
+  # Close the cursor and the database connection.
+  cursor.close()
+  db.close()
+
+  return states
+
+# Display the results.
+states = list_states_with_names_starting_with_n('root', 'password', 'hbtn_0e_0_usa')
+for state in states:
+  print(state[0])
