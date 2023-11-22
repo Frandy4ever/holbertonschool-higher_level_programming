@@ -1,1 +1,1 @@
-readme
+![Best Ways To Learn JavaScript](best-ways-to-learn-javascript.jpg)
