@@ -1,3 +1,3 @@
 #!/usr/bin/node
-const arguments = process.argv;
-console.log(arguments[2] + ' is ' + arguments[3]);
+const cLArguments = process.argv;
+console.log(cLArguments[2] + ' is ' + cLArguments[3]);
