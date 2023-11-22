@@ -1,7 +1,3 @@
 #!/usr/bin/node
-const arguments = process.argv;
-if (arguments < 3) {
-  console.log('No arguments');
-}else {
-  console.log(arguments[2]);
-}
+const firstArgument = process.argv[2];
+console.log(firstArguments !== undefined ? firstArguments: 'No arguments');
