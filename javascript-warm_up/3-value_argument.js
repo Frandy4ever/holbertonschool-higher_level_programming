@@ -1,8 +1,7 @@
 #!/usr/bin/node
-const sysArgs = process.argv.length - 2;
-
-if (sysArgs === 0) {
-    console.log('No argument');
+const arguments = process.argv
+if (arguments < 3) {
+  console.log('No arguments');
 }else {
-    console.log(sysArgs[1]);
+  console.log(arguments[2]);
 }
