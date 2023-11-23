@@ -2,9 +2,9 @@
 
 
 // Print the value of a variable
-function printVarValue () {
-  const myVar = 'Javascript is amazing';
+function printVarValue (myVar) {
   console.log(myVar);
 }
 
-printVarValue();
+const myVar = 'Javascript is amazing';
+printVarValue(myVar);
