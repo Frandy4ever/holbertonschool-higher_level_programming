@@ -1,0 +1,1 @@
+![Best ways to learn JavaScript](best-ways-to-learn-javascript.jpg)
