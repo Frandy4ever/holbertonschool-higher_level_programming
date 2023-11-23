@@ -1,6 +1,5 @@
 #!/usr/bin/node
 
-
 // Print the value of a variable
 function printVarValue (myVar) {
   console.log(myVar);
