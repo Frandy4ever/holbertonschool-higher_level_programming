@@ -1,7 +1,7 @@
 #!/usr/bin/node
+const cLArguments = process.argv[2];
+const i = 0;
 
-let i = 0;
-
-while (i < x) {
+while (i < cLArguments) {
     console.log('C is fun');
 }
