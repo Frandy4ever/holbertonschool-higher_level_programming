@@ -3,4 +3,4 @@
 // Prints the value of a const variable.
 
 const myVar = 'Javascript is amazing';
-printVarValue(myVar);
+console.log(myVar);
