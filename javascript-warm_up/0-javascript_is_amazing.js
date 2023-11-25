@@ -1,9 +1,6 @@
 #!/usr/bin/node
 
-// Print the value of a variable
-function printVarValue (myVar) {
-  console.log(myVar);
-}
+// Prints the value of a const variable.
 
 const myVar = 'Javascript is amazing';
 printVarValue(myVar);
