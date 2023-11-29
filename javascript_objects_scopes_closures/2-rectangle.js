@@ -3,6 +3,9 @@
 
 module.exports = class Rectangle {
   constructor (w, h) {
-    ((w && h) > 0)[this.width, this.height][w, h];
+    if ((w && h) > 0) {
+      this.width = w;
+      this.height = h;
+    }
   }
 };
