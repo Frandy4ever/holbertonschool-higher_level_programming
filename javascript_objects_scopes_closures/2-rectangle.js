@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Rectangle class with constructor having two arguments w and h
+// Create attribute width and height if class is not empty
 
 module.exports = class Rectangle {
   constructor (w, h) {
