@@ -1,14 +1,9 @@
 #!/usr/bin/node
-// Clone the original list to avoid modifying it directly
-
+// Returns the reversed version of a list
 exports.esrever = function (list) {
-  const reversedList = [...list];
-
-  for (let i = 0, j = reversedList.length - 1; i < j; i++, j--) {
-    const temp = reversedList[i];
-    reversedList[i] = reversedList[j];
-    reversedList[j] = temp;
+  const revList = [];
+  for (let i = list.length - 1; i >= 0; i--) {
+    revList.push(list[i]);
   }
-
-  return reversedList;
+  return revList;
 };
