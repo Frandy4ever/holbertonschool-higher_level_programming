@@ -2,14 +2,14 @@
 // the value of hello from that fetch in the HTML’s tag DIV#hello.
 $(document).ready(function () {
   $.ajax({
-    url: 'https://fourtonfish.com/hellosalut/?lang=fr',
+    url: 'https://hellosalut.stefanbohacek.dev/?lang=fr',
     method: 'GET',
     dataType: 'json',
     success: function (data) {
       $('#hello').text(data.hello);
     },
     error: function () {
-      console.log('Error fetching data.');
+      console.log('Error fetching translation.');
     }
   });
 });
