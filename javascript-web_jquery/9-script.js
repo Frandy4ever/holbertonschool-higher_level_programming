@@ -1,4 +1,5 @@
-// Fetches from https://fourtonfish.com/hellosalut/?lang=fr and displays the value of hello from that fetch in the HTML’s tag DIV#hello.
+// Fetches from https://fourtonfish.com/hellosalut/?lang=fr and displays 
+// the value of hello from that fetch in the HTML’s tag DIV#hello.
 $(document).ready(function () {
     $.ajax({
         url: 'https://fourtonfish.com/hellosalut/?lang=fr',
