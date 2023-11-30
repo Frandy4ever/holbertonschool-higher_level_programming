@@ -1,6 +1,5 @@
 // Fetches ahd prints how to say “Hello” depending of the language
 $(document).ready(function () {
-  // Function to fetch and display the translation
   function fetchTranslation () {
     const languageCode = $('#language_code').val().trim();
 
