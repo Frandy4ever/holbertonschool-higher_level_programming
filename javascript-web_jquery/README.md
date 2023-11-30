@@ -1,0 +1,1 @@
+![What is jQuery?](what-is-jquery-1.png)
